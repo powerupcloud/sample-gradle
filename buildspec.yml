@@ -1,9 +1,12 @@
 version: 0.2
 
 phases:
+  pre-build:
+    commands:
+     - chmod +x gradlew
   build:
     commands:
       - ./gradlew build
-artifacts:
-  files:
-    - /
+  artifacts:
+    files:
+      - /

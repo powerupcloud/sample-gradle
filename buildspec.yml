@@ -6,6 +6,6 @@ phases:
   build:
     commands:
       - ./gradlew build
-artifacts:
-    files:
-      - /
+
+
+

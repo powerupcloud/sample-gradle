@@ -9,11 +9,11 @@ phases:
       - ./gradlew build
   post_build:
     commands:
-      - cd /build 
+      - cd build 
       - cp -rf * /deploy
       - cd ..
-      - cd /deploy
+      - cd deploy
       - zip -r codedeploy-$(date +%Y%m%d%H%m%S).zip *	  
 artifacts:
   files:
-    - /deploy/codedeploy-$(date +%Y%m%d%H%m%S).zip
+    - deploy/codedeploy-$(date +%Y%m%d%H%m%S).zip

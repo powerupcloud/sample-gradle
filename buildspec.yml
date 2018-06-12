@@ -1,5 +1,4 @@
 version: 0.2
-
 phases:
   pre-build:
     commands:
@@ -7,6 +6,6 @@ phases:
   build:
     commands:
       - ./gradlew build
-  artifacts:
+artifacts:
     files:
       - /

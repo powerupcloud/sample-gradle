@@ -9,11 +9,9 @@ phases:
       - ./gradlew build
   post_build:
     commands:
-      - cd build 
-      - cp -rf * deploy
-      - cd ..
-      - cd deploy
+      - cp appspec.yml build 
+      - cd build
       - zip -r codedeploy-$(date +%Y%m%d%H%m%S).zip *	  
 artifacts:
   files:
-    - deploy/codedeploy-$(date +%Y%m%d%H%m%S).zip
+    - build/codedeploy-$(date +%Y%m%d%H%m%S).zip

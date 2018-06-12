@@ -10,7 +10,7 @@ phases:
   post_build:
     commands:
       - cd build 
-      - cp -rf * /deploy
+      - cp -rf * deploy
       - cd ..
       - cd deploy
       - zip -r codedeploy-$(date +%Y%m%d%H%m%S).zip *	  

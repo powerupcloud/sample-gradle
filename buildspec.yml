@@ -2,16 +2,16 @@ version: 0.2
 phases:
   pre_build:
     commands:
-	 - sudo apt install zip unzip
+     - sudo apt install zip unzip
      - chmod +x gradlew
   build:
     commands:
       - ./gradlew build
   post_build:
     commands:
-	  -cd /build 
-	  -cp -rf * /deploy
-	  -zip -r codedeploy-$(date +%Y%m%d%H%m%S).zip deploy/
+      - cd /build 
+      - cp -rf * /deploy
+      - zip -r codedeploy-$(date +%Y%m%d%H%m%S).zip deploy/
 	  
 artifacts:
   files:

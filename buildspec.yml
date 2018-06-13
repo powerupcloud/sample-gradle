@@ -16,6 +16,4 @@ phases:
       - ls -l 
 artifacts:
   files:
-      - '*'
-  discard-paths: yes
-  base-directory: /build/
+      - /build/codedeploy-$(date +%Y%m%d%H%m%S).zip

@@ -12,7 +12,8 @@ phases:
       - cp appspec.yml build
       - cp -rf scripts build  
       - cd build
-      - zip -r codedeploy-$(date +%Y%m%d%H%m%S).zip *	  
+      - zip -r codedeploy-$(date +%Y%m%d%H%m%S).zip *	 
+      - ls -l 
 artifacts:
   files:
       - /build/codedeploy-$(date +%Y%m%d%H%m%S).zip

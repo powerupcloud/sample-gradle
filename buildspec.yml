@@ -9,7 +9,8 @@ phases:
       - ./gradlew build
   post_build:
     commands:
-      - cp appspec.yml build 
+      - cp appspec.yml build
+      - cp -rf scripts build  
       - cd build
       - zip -r codedeploy-$(date +%Y%m%d%H%m%S).zip *	  
 artifacts:

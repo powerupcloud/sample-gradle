@@ -1,6 +1,10 @@
-d
-da
-da
-
-ad
-ad
+version: 0.0
+os: linux
+files:
+  - source: /build/
+    destination: /opt/
+hooks:
+  ApplicationStart:
+    - location: scripts/start_application.sh
+      timeout: 300
+      runas: root

@@ -15,4 +15,4 @@ phases:
       - zip -r codedeploy-$(date +%Y%m%d%H%m%S).zip *	  
 artifacts:
   files:
-    - build/codedeploy-$(date +%Y%m%d%H%m%S).zip
+      - /build/codedeploy-$(date +%Y%m%d%H%m%S).zip
